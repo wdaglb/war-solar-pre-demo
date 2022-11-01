@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "./",
+    "outDir": "../scripts/",
+    "target": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "allowJs": false,
+    "experimentalDecorators": true,
+    "preserveSymlinks": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "strict": true,
+    "noImplicitAny": false
+  },
+  "include": [
+    "./"
+  ],
+  "exclude": [],
+  "tstl": {
+    //指定要为其生成代码的 Lua 版本
+    //"JIT", "5.3", "5.2", "5.1"
+    "luaTarget": "5.3",
+    //覆盖 Luadebug.traceback以将源映射应用于 Lua 堆栈跟踪。这将使错误消息指向您的原始 TypeScript 代码而不是生成的 Lua。
+    "sourceMapTraceback": true,
+    "luaLibImport": "require",
+    //这应该是项目中 TS 文件的名称/路径，它将作为代码的入口点。
+    "luaBundleEntry": "./App.ts",
+    //如果您不想在输出中包含ts2lua的标题，请将其设置为 true。
+    "noHeader": true,
+    "noResolvePaths": [
+      "jass.common",
+      "jass.console",
+      "jass.code",
+      "jass.debug",
+      "jass.dzapi",
+      "jass.globals",
+      "jass.japi",
+      "jass.runtime",
+      "jass.slk",
+      "jass.ai",
+      "jass.log",
+      "jass.message",
+      "jass.bignum",
+      "jass.hook",
+      "jass.storm",
+      "_SLA_temp",
+      "env_vars",
+      "base",
+      "blizzard",
+      "solar_boot",
+      "solar_aes",
+      "solar_addons",
+      "md5",
+      "base64",
+      "debugger",
+      "lua_debugger",
+      "json"
+    ]
+  }
+}
